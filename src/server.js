@@ -8,6 +8,9 @@ app.set('views', __dirname + '/../views');
 app.set('view engine', 'ejs');
 
 app.use(express.static(__dirname + '/../public/images'));
+// app.use(express.static(__dirname + '/../public/stylesheets'));
+app.use(express.static(__dirname + '/../public'));
+
 
 app.use(bodyParser.urlencoded({ extended: false})); // add http parsing to server
 app.use('/', require('./routes'));
